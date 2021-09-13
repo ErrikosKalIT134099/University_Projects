@@ -1,0 +1,41 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Ask3 </title>    
+<script>
+ function overme(obj){
+   document.getElementById("image").src="http://i.dailymail.co.uk/i/pix/2016/03/08/22/006F877400000258-3482989-image-a-10_1457476109735.jpg"
+   console.log("Overm me was running");  
+ }
+
+    
+function getlost(obj){
+    
+    document.getElementById("image").src="http://cdn.theatlantic.com/assets/media/img/photo/2015/11/images-from-the-2016-sony-world-pho/s01_130921474920553591/main_900.jpg?1448476701"
+    console.log("Get lost !!!!");
+    
+    
+}
+    
+function click(obj){
+    
+    document.getElementById("image").src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXs0IflekGcO9mzs-7LhzIlsgsMobwuPeTo9qcofal1QZfL3pc"
+    console.log("Ckiclk!!!");
+    
+}
+   
+       
+    
+</script>
+</head>
+
+
+
+<body>
+  
+<img id="image" src="http://cdn.theatlantic.com/assets/media/img/photo/2015/11/images-from-the-2016-sony-world-pho/s01_130921474920553591/main_900.jpg?1448476701" style="width:128px;height:128px;" onmouseover="overme(this)" onmouseout="getlost(this)" onmouseup="click(this)"> 
+    
+</body>
+</html>

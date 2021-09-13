@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>  </title> 
+
+<script>
+
+    function colorme()
+    {
+        for(i=0; i<document.links.length; i++){
+		if(document.location.hostname==document.links[i].hostname)
+			document.links[i].style.backgroundColor="green";
+		else
+			document.links[i].style.backgroundColor="red";
+	}	
+    }
+    
+    
+</script>    
+</head> 
+  
+<body>
+  <a href="www.youtube.com" style="background-color: red;">Youtubr</a>
+  <a href="www.google.com" style="background-color: red;">Google</a>
+  <a href="www.google.com" style="background-color: red;">Google</a>
+  <a href="www.e-shop.com" style="background-color: red;">E-shop</a>
+  <br><br>
+  <input onclick="colorme()" name="Button1" type="button" value="Color ~!">
+</body>   
+</html>
+  

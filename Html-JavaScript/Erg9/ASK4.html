@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>  </title> 
+
+<script>
+    var visibility =true;
+    
+function Show()
+    {
+        
+        if(visibility)
+            {
+       for(i=0 ;  i<document.images.length; i++)
+           
+           document.getElementById("demo").innerHTML += document.images[i].src + "<br>";  
+            }
+    else
+        {
+        document.getElementById("demo").innerHTML = "";
+        }
+        
+    }
+</script>    
+</head> 
+  
+<body>
+<p id="demo"></p>
+    <input onclick="Show()" name="Button1" type="button" value="Emfanise"><br><br>
+    <img src="https://cdn.theatlantic.com/assets/media/img/photo/2015/11/images-from-the-2016-sony-world-pho/s01_130921474920553591/main_900.jpg?1448476701">
+    <img src="http://www.isharearena.com/wp-content/uploads/2012/12/wallpaper-281049.jpg?d54e04">
+    <img src="http://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg">
+  
+</body>   
+</html>
+  

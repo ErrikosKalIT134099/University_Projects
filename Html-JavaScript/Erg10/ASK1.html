@@ -1,0 +1,78 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>  </title> 
+<style>
+	.imgHolder {
+		width: 500px;
+	}
+}
+</style>
+<script>
+var imgs = [];
+imgs[0] = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwkVNjapidu3vMefklYuWghpiLCgmBts65IOuIqAehMPzyy0HR";
+imgs[1] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hSqRuVqiCIU6zkXBKakCc_hR_TYPW-RjwxIWTe_SKo44sd1gHQ";
+imgs[2] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TYbYXQyCeE6pnfgg66K9tK0VHAYGgLEv_GuQtHK9AVuD_9rKCQ";
+imgs[3] = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQZJ4ZQxrUSMTaEUFlkhmNZNKYihnx_6cblq1DeYsSkVlgaImjjag";
+var count = 0;
+var gallery;
+
+function changeimg(type) {
+	
+		if (type == 1) {
+			nextImg()
+		} else if (type == 2) {
+			prevImg();
+		}
+
+
+		document.getElementById("imgHolder").src=imgs[count];
+
+}
+
+function nextImg() {
+
+	count ++;
+	if (count > imgs.length -1 ) {
+			count = 0;
+	}
+	document.getElementById("imgHolder").src=imgs[count];
+}
+
+function prevImg() {
+	if (count == 0) {
+		count = imgs.length - 1;
+	} else {
+		count -= 1;
+	}
+}
+
+function start() {
+	console.log("started");
+	count = 0;
+	gallery = setInterval(nextImg, 2000);
+}
+
+function stop() {
+	console.log("stoped");
+	clearInterval(gallery);
+}
+
+
+</script>    
+</head> 
+  
+  <body>
+  <img class="imgHolder" id="imgHolder" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwkVNjapidu3vMefklYuWghpiLCgmBts65IOuIqAehMPzyy0HR"" /> <br/>
+	<button onclick="changeimg(2)"> Previous </button>
+	<button onclick="changeimg(1)"> Next </button>
+	<button onclick="start()"> Start </button>
+	<button onclick="stop()"> Stop </button>
+
+  
+  </body>   
+  </html>
+  

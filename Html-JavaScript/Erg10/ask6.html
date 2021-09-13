@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title></title>
+		<script>
+			var myTable;
+			
+			function createTable() {
+			var collumns = document.getElementById("collumns").value;
+			var rows = document.getElementById("rows").value;
+			myTable = null;
+			myTable = document.createElement("table");
+
+			myTable.setAttribute("border", "1");	
+			var newRows = [];	
+			for (var i=0; i<rows; i++) {
+				newRows[i] = myTable.insertRow(i);
+				for (var j=0; j<collumns; j++) {
+					var x = newRows[i].insertCell();
+					x.innerHTML = i + ", " + j;
+				}
+			}
+			document.body.appendChild(myTable);
+		}
+		
+		function removeRow() {
+			myTable.deleteRow(myTable.rows.length-1);
+		}
+		
+		function removeCell() {
+			for (var i=0; i<myTable.rows.length; i++) {
+				myTable.rows[i].deleteCell(myTable.rows[i].cells.length -1);
+			}
+		}
+		</script>
+	</head>
+	<body>
+
+		colons: <input type="text" id="collumns" /> 
+		rows: <input type="text" id="rows" />
+		<button onclick="createTable()"> createTable </button>
+		<button onclick="removeRow()"> Delete Row </button>
+		<button onclick="removeCell()"> Delete Column </button>
+
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<script>
+function ColorMe()
+{
+console.log("ColorMe run!");
+    var str= document.getElementById("Text1").value
+    if (str.length == 0 )
+    {
+       document.getElementById("Text1").style.backgroundColor = "red";  
+    }
+    else
+        if( isNaN (str))
+            document.getElementById("Text1").style.backgroundColor ="green";
+    else
+        document.getElementById("Text1").style.backgroundColor ="yellow";
+            
+}
+</script>
+</head>
+<body>
+<input id="Text1" type="text" onchange="ColorMe()"/>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Ask5 </title>  
+    
+<script>
+  
+function clicked(num){
+    console.log(num);
+    var str= document.getElementById("text"+num);
+        str.style.backgroundColor="yellow";
+    console.log("Its Yelloww!!!");
+}   
+    
+function unclicked(num){<!-- asd -->
+    var str= document.getElementById("text"+num);
+    if (str.value == "" || str.length== 0){
+        str.style.backgroundColor="red";
+    }
+    else
+str.style.background="white";
+    
+    console.log("its blurr time!!");
+}
+    
+    
+    
+</script>    
+</head> 
+    
+    
+<body>
+
+<input id="text1" type="text" onfocus="clicked(1)" onblur="unclicked(1)"> <br>   
+<input id="text2" type="text" onfocus="clicked(2)" onblur="unclicked(2)"> <br>
+<input id="text3" type="text" onfocus="clicked(3)" onblur="unclicked(3)"> <br>
+<input id="text4" type="text" onfocus="clicked(4)" onblur="unclicked(4)"><br>
+    
+    
+</body>   
+</html>

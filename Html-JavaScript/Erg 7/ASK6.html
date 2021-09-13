@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Ask6 </title>  
+    
+<script>
+  
+function clicked(x){
+  //  console.log(num);
+  //  console.log(num);
+//var str= document.getElementById("text"+num);
+        x.style.backgroundColor="yellow";
+    console.log("Its Yelloww!!!");
+}   
+    
+function unclicked(x){<!-- asd -->
+   // var str= document.getElementById("text"+num);
+    if (x.value == "" || x.length== 0){
+        x.style.backgroundColor="red";
+    }
+    else
+x.style.background="white";
+    
+    console.log("its blurr time!!");
+}
+    
+    
+    
+</script>    
+</head> 
+    
+    
+<body>
+
+<input id="text1" type="text" onfocus="clicked(this)" onblur="unclicked(this)"> <br>   
+<input id="text2" type="text" onfocus="clicked(this)" onblur="unclicked(this)"> <br>
+<input id="text3" type="text" onfocus="clicked(this)" onblur="unclicked(this)"> <br>
+<input id="text4" type="text" onfocus="clicked(this)" onblur="unclicked(this)"><br>
+    
+    
+</body>   
+</html>

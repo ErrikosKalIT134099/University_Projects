@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>  </title> 
+
+<script>
+function fill()
+    {
+       var myTable=document.getElementById("mytable");
+	for (i=0; i<myTable.rows.length; i++)
+	{
+		for (j=0; j<myTable.rows[i].cells.length; j++)
+		{
+			document.getElementById("mytable").rows[i].cells[j].innerHTML=Math.ceil(Math.random()*10);
+			var myCell=document.getElementById("mytable").rows[i].cells[j].innerHTML;
+			
+			if(myCell<5)
+				myTable.rows[i].cells[j].style.backgroundColor="red";
+			else
+				myTable.rows[i].cells[j].style.backgroundColor="green";
+		}
+	}
+
+        
+    }
+    
+</script>    
+</head> 
+  
+    
+    
+  <body>
+  
+  <input name="Button1" type="button" value="fill" id="b1" onclick="fill()"><br><br>
+<table id="mytable" border="6">
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+</tbody></table>
+  </body>   
+  </html>
+  

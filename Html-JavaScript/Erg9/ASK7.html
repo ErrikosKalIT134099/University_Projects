@@ -1,0 +1,58 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>  </title> 
+
+<script>
+	function setColors(num) {
+				var list;
+				if (document.getElementById("select").value == "1") list = document.getElementsByTagName("H1");
+				else list = document.getElementsByTagName("H2");
+				
+				if (num == 1) colorBGs(list);
+				else if (num == 2) removeColor(list);
+			}
+			
+			function colorBGs(list) {
+				for (var i=0; i<list.length; i++) {
+					list[i].style.backgroundColor = "red";
+				}
+				var btn = document.getElementById("btn");
+				btn.value = "clear";
+				btn.onclick = function() { setColors(2) } ;
+			}
+			
+			function removeColor(list)  {
+				for (var i=0; i<list.length; i++) {
+					list[i].style.backgroundColor = "white";
+				}
+				var btn = document.getElementById("btn");
+				btn.value = "Color";
+				btn.onclick = function() { setColors(1) };
+			}
+</script>    
+</head> 
+  
+<body>
+    <select id="select"> <option value="1"> H1 </option> <option value="2"> H2 </option> </select>
+		<input type="button" value="Color me" id="btn" onclick="setColors(1)"/> <br/>
+  <h1> TITLE 1 </h1>
+		<h2> TITLE 2 </h2>
+		<h1> TITLE 1 </h1>
+		<h1> TITLE 1 </h1>
+		<h2> TITLE 2 </h2>
+		<h1> TITLE 1 </h1>
+		<h1> TITLE 1 </h1>
+		<h2> TITLE 2 </h2>
+		<h2> TITLE 2 </h2>
+		<h1> TITLE 1 </h1>
+		<h2> TITLE 2 </h2>
+		<h2> TITLE 2 </h2>
+		<h2> TITLE 2 </h2>
+  
+</body>   
+</html>
+  

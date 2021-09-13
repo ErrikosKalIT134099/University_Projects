@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title></title>
+		<script>
+			
+			function createTable() {
+			var collumns = document.getElementById("collumns").value;
+			var rows = document.getElementById("rows").value;
+			var myTable = document.createElement("table");
+
+			myTable.setAttribute("border", "1");	
+			var newRows = [];	
+			for (var i=0; i<rows; i++) {
+				newRows[i] = myTable.insertRow(i);
+				for (var j=0; j<collumns; j++) {
+					var x = newRows[i].insertCell();
+					x.innerHTML = i + ", " + j;
+				}
+			}
+			document.body.appendChild(myTable);
+		}
+		</script>
+	</head>
+	<body>
+
+		colonsς: <input type="text" id="collumns" />
+		rows: <input type="text" id="rows" />
+		<button onclick="createTable()"> createTable </button>
+
+	</body>
+
+</html>

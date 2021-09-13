@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Ask3 </title>    
+<script>
+ function overme(obj){
+     obj.style.backgroundColor = "red";
+     console.log("overme was running");
+     
+ }
+
+    
+function getlost(obj){
+    obj.style.backgroundColor="white";
+    console.log("get lost !!")
+    
+    
+}
+   
+       
+    
+</script>
+</head>
+
+<table border="1" cellpadding="2" style="width: 10%">
+    
+ <tr>
+    <td onmouseover="overme(this)" onmouseout=" getlost(this)">1</td>
+ </tr>
+    
+<tr>
+<td onmouseover="overme(this)" onmouseout="getlost(this)">2</td>    
+</tr>
+    
+<tr>
+<td onmouseover="overme(this)" onmouseout="getlost(this)">3</td>    
+</tr>
+    
+ </table>
+
+<body>
+  
+    
+    
+</body>
+</html>
