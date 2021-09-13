@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.master.cs" Inherits="Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>E-BookStore.gr</title>
+    <link href="css/MainStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="topdiv">
+        <!--Epeidi den exei placeholder 8a emfanizete pantou to idio-->
+        <asp:Button ID="HomeB" runat="server" Text="Αρχικη" OnClick="HomeB_Click" />
+        <asp:Button ID="ShopInfoB" runat="server" Text="Το Καταστημα" OnClick="ShopInfoB_Click" />
+        <asp:Button ID="Products" runat="server" Text="Προιοντα" OnClick="Products_Click" />
+        <asp:Button ID="CartB" runat="server" Text="Το καλαθι" OnClick="CartB_Click" />
+        <asp:Button ID="LoginB" runat="server" Text="Εισδος" OnClick="LoginB_Click" />
+        <asp:Button ID="ContactB" runat="server" Text="Επικοινωνια" OnClick="ContactB_Click" />
+    </div>
+    <div class="leftdiv">
+     <asp:Label ID="usernameL" runat="server" Text=""></asp:Label><br />
+        <asp:Label ID="TestL" runat="server" Text=" "></asp:Label>
+        <asp:Button ID="AdminOrdersB2" Visible=false runat="server" Text="AdminOrdersB2" 
+            onclick="AdminOrdersB2_Click" />
+    <asp:Button ID="MyOrdersB" runat="server" Text="Εμφάνιση παραγγελιών" Visible="false" /><br />
+    <asp:Button ID="MyDetailsB" runat="server" Text="Στοιχεία πελάτη"  Visible="false" OnClick="MyDetailsB_Click"  /><br />
+   <asp:Button ID="MyDetailB" runat="server" Text="Στοιχεία πελάτη(DataSet)"  
+            Visible="false" onclick="MyDetailB_Click"  />
+    <asp:Button ID="CustomersB" runat="server" Text="Λίστα πελατών"  Visible="false" OnClick="CustomersB_Click"/><br />
+    <asp:Button ID="OrdersB" runat="server" Text="Λίστα παραγγελιών" Visible="false" 
+            onclick="OrdersB_Click" /><br />
+    <asp:Button ID="LogOutB" runat="server" Text="Αποσύνδεση "  Visible="false" OnClick="LogOutB_Click" /><br />
+   
+     <asp:Button ID="EditCatB" runat="server" Visible="false" Text="Διαχείριση Κατηγοριών" OnClick="EditCatB_Click" /><br />
+    <asp:Button ID="EditProB" runat="server" Visible="false" 
+            Text="Διαχείριση Προϊόντων" onclick="EditProB_Click" /><br />
+    <asp:Button ID="EditOrdB" runat="server" Visible="false" Text="Διαχείριση Παραγγελιών" /><br />
+        <asp:ContentPlaceHolder id="LeftContent" runat="server">
+       
+             </asp:ContentPlaceHolder>
+    </div>
+    <div class="maindiv">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+        <div class="footerdiv">
+            <p>ADiSE E-BookStore</p>
+        </div>
+    </form>
+</body>
+</html>

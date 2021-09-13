@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="topdiv">
+        <asp:Button ID="homeb" runat="server" OnClick="homeB_Click" Text="Αρχικη Σελιδα" />
+        <asp:Button ID="shopInfob" runat="server" OnClick="shopInfob_Click" Text="Το Καταστημα" />
+        <asp:Button ID="productsb" runat="server" OnClick="productsb_Click" Text="Προιοντα" />
+       <asp:Button ID="kalathib" runat="server" OnClick="kalathib_Click" Text="Καλαθι Αγορων" />
+        <asp:Button ID="loginb" runat="server" OnClick="loginb_Click" Text="Εισοδος" />
+        <asp:Button ID="epikoinwniab" runat="server" OnClick="epikoinwniab_Click" Text="Επικοινωνια" />
+        
+    </div>
+   
+    <div class="leftdiv">
+        <asp:ContentPlaceHolder ID="leftcontent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <div class="maindiv">
+    
+        <asp:ContentPlaceHolder ID="maincontent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <div class="footerdiv">
+     ΣΧΕΔΙΑΣΗ ΥΛΟΠΟΙΗΣΗ ΓΙΑ ΤΟ ΜΑΘΗΜΑ ΑΔΙΣΕ
+     <br />
+    ΤΕΙ ΘΕΣΣΑΛΟΝΙΚΗΣ
+     </div>
+   </form>
+</body>
+</html>
